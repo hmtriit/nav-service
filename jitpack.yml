@@ -1,3 +1,8 @@
 install:
-- FILE="-Dfile=nav-service-1.0.4.aar"
-- mvn install:install-file $FILE DgroupId=com.nav.service -DartifactId=nav-service-sdk -Dversion=1.0.4 -Dpackaging=aar -DpomFile=pom.xml
+- mvn install:install-file \
+    -Dfile=nav-service-1.0.4.aar \
+    -DgroupId=com.nav.service \
+    -DartifactId=nav-service-sdk \
+    -Dversion=1.0.5 \
+    -Dpackaging=aar \
+    -DpomFile=pom.xml
