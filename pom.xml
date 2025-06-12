@@ -5,17 +5,30 @@
 
   <groupId>com.nav.service</groupId>
   <artifactId>nav-service-sdk</artifactId>
-  <version>1.0.4</version>
-  <name>nav-service-sdk</name>
+  <version>1.0.5</version>
   <packaging>aar</packaging>
+  <name>nav-service-sdk</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <android.sdk.platform>33</android.sdk.platform> <!-- API level -->
+    <android.sdk.platform>33</android.sdk.platform>
   </properties>
 
+  <repositories>
+    <!-- Google Maven for androidx.annotation -->
+    <repository>
+      <id>google</id>
+      <url>https://maven.google.com/</url>
+    </repository>
+    <!-- Backup: Maven Central -->
+    <repository>
+      <id>central</id>
+      <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
+  </repositories>
+
   <dependencies>
-    <!-- Add AndroidX Annotation (Fixes compile error on JitPack) -->
+    <!-- Fixes: package androidx.annotation does not exist -->
     <dependency>
       <groupId>androidx.annotation</groupId>
       <artifactId>annotation</artifactId>
